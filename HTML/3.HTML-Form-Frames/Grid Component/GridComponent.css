@@ -1,0 +1,29 @@
+#ID
+{
+width:30px;
+height:20px;
+}
+#name
+{
+width:130px;
+height=20px;
+}
+#price, #qpu, #stock
+{
+width:80px;
+height=20px;
+}
+.button
+{
+width:20px;
+height:20px;
+}
+#thead, #tfoot
+{
+background-color:lightgreen;
+}
+.decoration
+{
+text-decoration:none;
+vertical-align:middle;
+}

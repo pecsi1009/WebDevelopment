@@ -1,0 +1,53 @@
+body, div, ul, li, a, fieldset, legend, label, textarea {
+  margin: 0;
+  padding: 0; }
+
+body #wrapper {
+  width: 350px;
+  height: 260px;
+  margin: 15px 15px;
+  display: inline-block;
+  font-size: 16px; }
+  body #wrapper .popup-content.invisible {
+    display: none; }
+  body #wrapper li {
+    list-style-type: none;
+    border-top: 1px solid black;
+    width: 110px;
+    position: relative; }
+    body #wrapper li a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.0em; }
+      body #wrapper li a img {
+        float: right;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        margin-top: 5px; }
+      body #wrapper li a span {
+        display: inline-block;
+        margin: 15px 5px 5px 5px; }
+        body #wrapper li a span:hover {
+          font-weight: bold; }
+    body #wrapper li:last-of-type {
+      border-bottom: 1px solid black; }
+    body #wrapper li .popup-content {
+      float: right;
+      position: absolute;
+      display: inline-block;
+      margin: -1px 50px; }
+    body #wrapper li div .btn-popup-close {
+      position: absolute;
+      float: right;
+      margin: 10px 180px; }
+    body #wrapper li div fieldset {
+      width: 210px;
+      height: 155px;
+      border: 1px solid black; }
+      body #wrapper li div fieldset legend {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-left: 15px; }
+

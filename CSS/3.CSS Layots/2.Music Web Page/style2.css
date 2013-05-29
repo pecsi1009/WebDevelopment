@@ -1,0 +1,55 @@
+body{
+	font-size:1.5em;
+}
+.main
+{
+	background:#ccc;
+	border-radius:10px;
+	border:1px solid black;
+	position:relative;
+	width:500px;
+}
+#title{
+	padding:5px 15px;
+	text-align:left;
+	font-family:cursive, sans-serif;
+}
+.sub-main{
+	border:1px solid black;
+	background:#fff;
+	margin:15px;
+	padding:25px;
+	font-size:0.6em;
+	font-family:Vedrdana,sans-serif;
+	
+}
+a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}
+.button{
+	color:#fff;
+	background:red;
+	width:50px;
+	padding:5px;
+	box-shadow: inset 15px 0 0 #8A0000;
+	display: inline-block;
+	text-align:right;
+	font-weight:lighter;
+	border-style:outset;
+	border:1px solid red;
+}
+.text{
+	display:inline;
+	top:0;
+}
+img{
+	float:left;
+	margin-right:15px;
+}
+p{
+	text-align:right;
+}
+
+

@@ -1,0 +1,75 @@
+#body{
+	font-size:1.3em;
+	font-family:times-new-roman,sans serif;
+	background:#696969;
+	width:800px;
+	height:400px;
+	margin: 50px 50px 50px 50px;
+	padding:0;
+}
+header{
+	background:#333;
+	background: rgb(76,76,76);
+	background: -moz-linear-gradient(top, rgb(76,76,76) 0%, rgb(89,89,89) 5%, rgb(102,102,102) 21%, 
+		rgb(102,102,102) 45%, rgb(71,71,71) 66%, rgb(43,43,43) 85%, rgb(44,44,44) 89%, 
+		rgb(28,28,28) 93%, rgb(17,17,17) 99%, rgb(0,0,0) 100%, rgb(19,19,19) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(76,76,76)), 
+		color-stop(5%,rgb(89,89,89)), color-stop(21%,rgb(102,102,102)), 
+		color-stop(45%,rgb(102,102,102)), color-stop(66%,rgb(71,71,71)), 
+		color-stop(85%,rgb(43,43,43)), color-stop(89%,rgb(44,44,44)), 
+		color-stop(93%,rgb(28,28,28)), color-stop(99%,rgb(17,17,17)), 
+		color-stop(100%,rgb(0,0,0)), color-stop(100%,rgb(19,19,19)));
+	background: -webkit-linear-gradient(top, rgb(76,76,76) 0%,rgb(89,89,89) 5%,rgb(102,102,102) 21%,
+		rgb(102,102,102) 45%,rgb(71,71,71) 66%,rgb(43,43,43) 85%,rgb(44,44,44) 89%,rgb(28,28,28) 93%,
+		rgb(17,17,17) 99%,rgb(0,0,0) 100%,rgb(19,19,19) 100%);
+	background: -o-linear-gradient(top, rgb(76,76,76) 0%,rgb(89,89,89) 5%,rgb(102,102,102) 21%,
+		rgb(102,102,102) 45%,rgb(71,71,71) 66%,rgb(43,43,43) 85%,rgb(44,44,44) 89%,
+		rgb(28,28,28) 93%,rgb(17,17,17) 99%,rgb(0,0,0) 100%,rgb(19,19,19) 100%);
+	background: -ms-linear-gradient(top, rgb(76,76,76) 0%,rgb(89,89,89) 5%,rgb(102,102,102) 21%,
+		rgb(102,102,102) 45%,rgb(71,71,71) 66%,rgb(43,43,43) 85%,rgb(44,44,44) 89%,
+		rgb(28,28,28) 93%,rgb(17,17,17) 99%,rgb(0,0,0) 100%,rgb(19,19,19) 100%);
+	background: linear-gradient(top, rgb(76,76,76) 0%,rgb(89,89,89) 5%,rgb(102,102,102) 21%,
+		rgb(102,102,102) 45%,rgb(71,71,71) 66%,rgb(43,43,43) 85%,rgb(44,44,44) 89%,
+		rgb(28,28,28) 93%,rgb(17,17,17) 99%,rgb(0,0,0) 100%,rgb(19,19,19) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', 
+		endColorstr='#131313',GradientType=0 );
+}
+h2,img,input{
+	display:inline;
+}
+h2,input{
+	position:relative;
+	top:-10px;
+	left:50px;
+}
+input{
+	margin-left:20px;
+	margin-right:2px;
+	height:20px;
+	width:150px;
+	padding-left:20px;
+	font-weight:bold;
+}
+img:last-of-type{
+	position:relative;
+	top:10px;
+	left:70px;
+}
+h2,span{
+	color:#fff
+}
+p{
+	padding-right:60px;
+	margin:0;
+	color:#ccc;
+	font-size:1.0em;
+}
+article{
+	margin-left:10px;
+	}
+h1{
+	color:#ffcc33;
+}
+
+
+

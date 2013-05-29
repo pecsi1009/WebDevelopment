@@ -1,0 +1,75 @@
+body{
+	background-color:#999;
+	text-align:left;
+	}
+h1{
+	color:#ffffcc;
+	font-family:times-new-roman, times, serif;
+	}
+/*=========================================
+		HEADER
+===========================================*/
+.section1{
+	text-align:center;
+	}
+h1.section1{
+	font-size:41pt;
+	}
+li a:link{
+	font-weight:bold;
+	text-decoration:none;
+	color:#ffffcc;
+	font-size:21pt;
+	}
+li a:visited{
+	font-weight:bold;
+	text-decoration:none;
+	color:#ffffcc;
+	}
+li:last-child{
+	text-decoration:underline;
+	color:#ffffcc
+	}
+ul.a{
+	list-style-type:none;
+	}
+a.current{
+	background-color:#ccc;
+	}
+/*====================================
+		SECTION
+=====================================*/
+h1{
+	font-size:26pt;
+	}
+article p{
+	font-family:Georgia, serif;
+	font-weight:normal;
+	font-size:13pt;
+	}
+footer a:link{
+	color:#000;
+	font-size:13pt;
+	font-family:Georgia, serif;
+	text-decoration:none;
+	}
+footer a:visited{
+	color:#000;
+	font-size:13pt;
+	font-family:Georgia, serif;
+	text-decoration:none;
+	}
+section footer{
+	text-align:left;
+	}
+/*====================================
+		FOOTER
+=====================================*/
+footer{
+	text-align:center;
+	font-size:15pt;
+	}
+	
+	
+	
+

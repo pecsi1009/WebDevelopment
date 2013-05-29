@@ -1,0 +1,37 @@
+#month, #day
+{
+width:20px;
+}
+#lname, #fname, #email
+{
+width:200px;
+}
+#addres
+{
+width:150px;
+}
+#city, #country
+{
+width:130px;
+}
+#state, #code, #code2, #code3 
+{
+width:40px;
+}
+#number
+{
+width:85px;
+}
+#year
+{
+width:50px;
+}
+#cq
+{
+width:190px;
+height:100px;
+}
+
+
+
+

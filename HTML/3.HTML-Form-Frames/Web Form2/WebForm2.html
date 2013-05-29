@@ -1,0 +1,102 @@
+<! DOCTYPE html>
+<html>
+	<head>
+		<title> Web Form2  </title>
+		<link href ="WebForm.css" rel="stylesheet" type="text/css" >
+	</head>
+	<body>
+		<form method="get" action="">
+			<table cellspacing="0" cellpadding="1" border="1" bordercolor="lightgrey">
+				<tfoot>
+				<tr>
+					<td colspan="4" style="background:skyblue" align="center">
+						<input type="submit" value="Submit" style="background:grey"/>
+						<input type="reset" value="Clear this form" style="background:grey"/>
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td align="right"><label for="lname"><b>Last Name</b></label></td>
+					<td colspan="3">
+						<input type="text" name="lname" id="lname" placeholder="Nakov" required="true"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="fname"><b> First Name</b></label></td>
+					<td colspan="3"><input type="text" name="lname" id="fname" placeholder="Svetlin" required="true"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="addres"><b>Addres</b></label></td>
+					<td colspan="3">
+						<textarea name="addres" id="addres" cols="30" rows="5"
+						placeholder="17 Hristo Botev Str."floor 3, apt. 13"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="city"><b>City</b></label></td>
+					<td><input type="text" name="city" id="city" placeholder="Kaspichan" required="true"/></td>
+					<td><label for="state"><b>State</b></label></td>
+					<td><input type="text" name="state" id="state"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="code"><b>Zip/Postal Code</b></label></td>
+					<td colspan="3"><input type="tel" name="code" id="code"  placeholder="9325"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="country"><b>Country</b></label></td>
+					<td colspan="3"><select name="Country" id="country">
+						<option value="Value1" selected="selected">	Bulgaria	</option>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="code2"><b>Phone(contry code,<br> area code, number)</br></b></label></td>
+					<td colspan="3">
+						(+<input type="tel" id="code2" placeholder="359" required="true"/>
+						)<input type="tel" id="code3" placeholder="88" tabindex="1" required="true"/>
+						-<input type="tel" id="number" placeholder="8334343" required="true"/>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="email"><b>E-mail</b></td>
+					<td colspan="3"><input type="email" id="email" placeholder="nakov@kaspichan.org"/></td>
+				</tr>
+				<tr>
+					<td align="right"><label for="birthdate"><b>Birth date</b></label></td> 
+					<td>
+						<label for="month">Month<input type="month" id="month" placeholder="06"/>
+						<label for="day">Day<input type="day" id="day" placeholder="14"></label>
+						<label for="year">Year(4digit)<input type="year" id="year" placeholder="1980">
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><label for="gender"><b>Gender</b></label></td>
+					<td colspan="3">
+						<select name="Gender" for="gender">
+							<option value="Value1" id="gender" selected="selected">Male</option>
+							<option value="Value2">Female</option>
+							<option value="Value3">Other</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right"><b>Starting date</b></td>
+					<td colspan="3">
+						<input type="radio" name="gender" id="1" value="Spring 2006" required="true"/>
+						<label for="1">Spring 2006</label>
+						<input type="radio" name="gender" id="2" value="Summer 2006" required="true"/>
+						<label for="2">Summer 2006</label>
+					</td>
+				</tr>
+				<tr>
+					<td align="3"><label for="cq"><b>Comments/Question</b></label></td>
+					<td colspan="3">
+						<textarea name="Comment" id="cq" 
+						placeholder="Please send me more information about the logging"></textarea>
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</form>
+	</body>
+</html>

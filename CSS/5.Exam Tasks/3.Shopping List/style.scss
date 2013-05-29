@@ -1,0 +1,71 @@
+body, div, ul, li, a, fieldset,legend,label,textarea{
+	margin:0;
+	padding:0;
+}
+body{
+	#wrapper{
+		width:350px ;
+		height:260px;
+		margin:15px 15px;
+		display: inline-block;
+		font-size:16px;
+	
+		.popup-content.invisible{
+			display: none;
+		}
+		li{
+			list-style-type:none;
+			border-top:1px solid black;
+			width:110px;
+			position: relative;
+		
+			a{
+				text-decoration:none;
+				color: black;
+				font-size:1.0em;
+				img{
+					float: right;
+					position: absolute;
+					width:25px;
+					height:25px;
+					margin-top:5px;
+					
+				}
+				span{
+					display: inline-block;
+					margin:15px 5px 5px 5px;
+					&:hover{
+						font-weight: bold;
+					}
+				}
+			}
+			&:last-of-type{border-bottom:1px solid black;}
+			.popup-content{
+				float: right;
+				position: absolute;
+				display: inline-block;
+				margin:-1px 50px;
+			}
+			div{
+				.btn-popup-close{
+					position: absolute;
+					float: right;
+					margin:10px 180px;
+				}
+				fieldset{
+					width:210px;
+					height:155px;
+					border:1px solid black;
+					legend{
+						text-align:left;
+						font-weight:bold;
+						font-size:1.2em;
+						margin-left:15px;
+					}
+				}
+			
+			}
+
+		}
+	}
+}

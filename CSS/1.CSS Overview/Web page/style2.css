@@ -1,0 +1,22 @@
+table,td,th,tr{
+	font-family:helvetica, arial;
+	border-right:2px solid lightgrey;
+	font-size:13pt;
+	text-align:left;
+	border-collapse:collapse;
+	}
+th{
+	height:20pt;
+	width:120pt;
+	background-color:#66cc00;
+	color:#fff;
+	}
+tr:nth-child(2n){
+	background-color:#e2d8bc;
+}
+th:nth-child(2n){
+	width:80pt;
+	}
+
+	
+	

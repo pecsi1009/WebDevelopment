@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grid Component</title>
+		<link href ="GridComponent.css" rel="stylesheet" type="text/css" >
+	</head>
+	<body>
+		<form name="Grid" method="get">
+		<table cellspacing="0" cellpadding="3" border="1">
+			<thead id="thead">
+				<tr>
+					<th colspan="6" align="left"> Drag a column header and drop it here to group by that column</th>
+				</tr>
+				<tr>
+					<th>Product ID</th>
+					<th>Product name</th>
+					<th>Unit price</th>
+					<th>Quantity per unit</th>
+					<th>Unit in stock</th>
+					<th>Discontinued</th>
+				</tr>
+				<tr>
+					<th><input type="text" id="ID"/></th>
+					<th><input type="text" id="name"/></th>
+					<th><input type="text" id="price"/><input type="image" src="filter.jpeg" class="button"/></th>
+					<th><input type="text" id="qpu"/></th>
+					<th><input type="text" id="stock"/><input type="image" src="filter.jpeg" class="button"/></th>
+					<th><input type="checkbox"/><input type="image" src="filter.jpeg" class="button"/></th>
+				</tr>
+			</thead>
+			<tfoot id="tfoot">
+				<tr>
+					<td colspan="6">
+						<input type="image" class="button" src="firstpage.jpeg"/>
+						<input type="image" class="button" src="previous.jpeg"/>
+							<a href="#" selected="selected" class="decoration">1</a>&nbsp
+							<a href="#" class="decoration">2</a>&nbsp
+							<a href="#" class="decoration">3</a>&nbsp
+							<a href="#" class="decoration">4</a>&nbsp
+							<a href="#" class="decoration">5</a>&nbsp
+							<a href="#" class="decoration">6</a>&nbsp
+							<a href="#" class="decoration">7</a>&nbsp
+							<a href="#" class="decoration">8</a>&nbsp
+							<a href="#" class="decoration">9</a>&nbsp
+							<a href="#" class="decoration">10</a>&nbsp
+							<a href="#" class="decoration">...</a>
+						<input type="image" class="button" src="next.jpeg"/>
+						<input type="image" class="button" src="lastpage.jpeg"/>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<label for="ps">Page size:</label>
+							<select id="ps" name="page size">
+							<option selected="selected">10</option>
+							<option>11</option></select>
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						&nbsp&nbsp&nbsp&nbsp335104 items in 33511 pages
+							
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Chai</td>
+					<td>$18</td>
+					<td>10boxes x 20bags</td>
+					<td>39</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Chai</td>
+					<td>$18</td>
+					<td>10boxes x 20bags</td>
+					<td>39</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Chang</td>
+					<td>$19</td>
+					<td>24-12 oz bottles</td>
+					<td>17</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Aniseed syrup</td>
+					<td>$10</td>
+					<td>12-550ml bottles</td>
+					<td>13</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Chaf Anton's Cajun Seasonic</td>
+					<td>$21.35</td>
+					<td>46-6 oz jars</td>
+					<td>53</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Chaf Anton's Gumbo Mix</td>
+					<td>$22</td>
+					<td>36boxes</td>
+					<td>0</td>
+					<td><input type="checkbox" checked></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Grandma's Boysberry Spread</td>
+					<td>$25</td>
+					<td>12 x 8 oz jars</td>
+					<td>120</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Uncle Bob dran dran</td>
+					<td>$30</td>
+					<td>12-1 lb pkgs.</td>
+					<td>29</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>Nothwoods cranberry Sauce</td>
+					<td>$40</td>
+					<td>12-12 oz jars</td>
+					<td>6</td>
+					<td><input type="checkbox"></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>Mishi Kobe Nicku</td>
+					<td>$97</td>
+					<td>18-500g pkgs.</td>
+					<td>29</td>
+					<td><input type="checkbox" checked></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Ikura</td>
+					<td>$31</td>
+					<td>12-200ml jars</td>
+					<td>31</td>
+					<td><input type="checkbox"></td>
+				</tr>
+			</tbody>
+		</table>
+		</form>
+	</body>
+</html>
