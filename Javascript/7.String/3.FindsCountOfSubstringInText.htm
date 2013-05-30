@@ -1,0 +1,69 @@
+﻿<!--
+    3.Write a JavaScript function that finds how many times a substring is contained in a given text
+     (perform case insensitive search).
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> FindCountOfSubstring </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>Write a JavaScript function that finds how many times a substring
+     is contained in a given text (perform case insensitive search).</p>
+	<p>Gotta get up and try try try.You goTTa get up and TRY try TRY</p>
+    <label for="substr">Enter substring for search in text: </label>
+	<input type="text" id="substr" />
+	<br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var str = "Gotta get up and try try try.You gotta get up and try try try".toLowerCase();
+	        var subStr = jsConsole.read("#substr").toLowerCase(); //to be the search insensitive.
+
+            var result=getCount(str,subStr);
+	        jsConsole.writeLine("The substring is containing in the text "+result+" times");
+
+	        function getCount(str, subStr) {
+	            var count = 0;
+	            var index = str.indexOf(subStr);
+
+	            while (index > -1) {
+	                count++;
+	                index = str.index(subStr, index + 1);
+	            }
+	            return count;
+            }
+	    }											
+    </script>			  
+</body>
+</html>

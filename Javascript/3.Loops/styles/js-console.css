@@ -1,0 +1,40 @@
+﻿.js-console {
+  margin: 0;
+}
+body .js-console {
+  margin: 0;
+  padding: 5px 10px;
+  background-color: black;
+  width: 800px;
+  height: 500px;
+  font-family: Consolas;
+  font-size: 18px;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  word-break: break-all;
+}
+body .js-console > p {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: block;
+}
+body .js-console > p > span {
+  margin: 0;
+  padding: 0;
+}
+body .js-console > p > br {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+a{
+	border:1px solid black;
+	background-color:green;
+	color:white;
+	padding:10px;
+	margin:10px;
+	display:block;
+	width:80px;
+	text-align:center;
+}

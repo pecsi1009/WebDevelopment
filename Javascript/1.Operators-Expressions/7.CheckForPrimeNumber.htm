@@ -1,0 +1,70 @@
+﻿<!--
+    7.Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Check for prime number</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		#number {
+			border: 1px solid black;
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
+			font-family: Consolas;
+			margin-bottom: 5px;
+		}
+
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+			background:green;
+            color:White;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body>
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<br />
+	<a href="#" onclick="onCheckButtonClick()">Check</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onCheckButtonClick() {
+	        var number = jsConsole.readFloat("#tb-number");
+
+	        if (number > 1 && number <= 100) {
+	            var isPrime = true;
+	            for (var i = 2; i <= Math.sqrt(number); i++) {
+	                if (number % i == 0) {
+	                    isPrime = false;
+	                }
+	            }
+
+	            if (isPrime) {
+	                jsConsole.writeLine("The number "+ number + " IS A PRIME");
+	            }
+	            else {
+	                jsConsole.writeLine("The number " + number + " is NOT A PRIME");
+	            }
+	        }
+	        else {
+	            jsConsole.writeLine("The number must be > 1 and <= 100 ");
+	        }
+	    }
+    </script>
+</body>
+</html>
+

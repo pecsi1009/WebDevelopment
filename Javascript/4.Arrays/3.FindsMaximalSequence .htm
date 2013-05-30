@@ -1,0 +1,41 @@
+﻿<!-- Write a script that finds the maximal sequence of equal elements in an array.
+		Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}..-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>FindMaxSequence</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Write a script that finds the maximal sequence of equal elements in an array.
+		Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.
+    </p>
+	 <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+        var arr = [3, 2, 1, 2, 3, 2, 2, 2, 2, 2, 1];
+        var len = 0;
+        var maxLen = 1;
+        var maxElement;
+        var maxStart = 0;
+        for (var index = 0; index < arr.length - 1; index++) {
+            if (arr[index] == arr[index + 1]) {
+                len++;
+                if (len > maxLen) {
+                    maxLen = len;
+                    maxElement = arr[index];
+                    maxStart = index;
+                }
+            }
+            else {
+                len = 1;
+            }
+        }
+        jsConsole.writeLine(arr);
+        jsConsole.writeLine(maxStart);
+        jsConsole.writeLine("Start index=" + maxStart + " element is" + " (" + maxElement + ") " + "with max length " + maxLen);
+        
+    </script>
+</body>
+</html>

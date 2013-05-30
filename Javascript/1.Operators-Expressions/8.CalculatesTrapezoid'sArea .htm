@@ -1,0 +1,58 @@
+﻿<!--
+    8.Write an expression that calculates trapezoid's area by given sides a and b and height h.
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Calculate trapezoid's area</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		#number {
+			border: 1px solid black;
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
+			font-family: Consolas;
+			margin-bottom: 5px;
+		}
+
+		a {
+			color: white;
+			background:green;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body>
+	<label for="tb-aSide">Side a= </label>
+	<input type="text" id="tb-aSide">
+    <label for="tb-bSide">Side b= </label>
+	<input type="text" id="tb-bSide">
+    <label for="tb-height">Height: </label>
+	<input type="text" id="tb-height" />
+	<br />
+	<a href="#" onclick="onCalculateButtonClick()">Push to calculate area</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onCalculateButtonClick() {
+	        var a = jsConsole.readFloat("#tb-aSide");
+	        var b = jsConsole.readFloat("#tb-bSide");
+	        var h = jsConsole.readFloat("#tb-height");
+	        var area = ((a + b)/2)*h;
+	        jsConsole.writeLine("Trapezoid's area = " + area);
+	    }
+	</script>
+</body>
+</html>

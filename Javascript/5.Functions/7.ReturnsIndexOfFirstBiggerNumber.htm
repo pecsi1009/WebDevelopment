@@ -1,0 +1,65 @@
+﻿<!--
+    Write a Function that returns the index of the first element in array that is bigger than its
+     neighbors, or -1, if there’s no such element.Use the function from the previous exercise.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> ReturnIndexOfBiggerNumber </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>Write a Function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.Use the function from the previous exercise.</p>
+	<p id="text"> array = [1, 4, 5, 3, 9, 12, 45, 67, 89, 32, 67, 4, 3, 90] </p>
+	<a href="#" onclick="onButtonClick()">Check</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var arr = [1, 4, 5, 3, 9, 12, 45, 67, 89, 32, 67, 4, 3, 90];
+	        CheckNeighbours(arr);
+
+            function CheckNeighbours(arr) {
+                var isBigger = false;
+                for (var index = 1; index < arr.length - 2; index++) {
+                    if ((arr[index] > arr[index + 1]) && (arr[index] > arr[index - 1])) {
+                        isBigger = true;
+                        jsConsole.writeLine("The first number in given array which is bigger than his neighbours is at position " + index + " and this number is " + arr[index]);
+                        break;
+                    }
+                }
+                if (isBigger == false){
+                    jsConsole.writeLine("-1");
+                }        
+	        }
+	    }											
+    </script>			  
+</body>
+</html>

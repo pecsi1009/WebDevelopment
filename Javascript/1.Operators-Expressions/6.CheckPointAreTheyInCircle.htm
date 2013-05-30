@@ -1,0 +1,63 @@
+﻿<!--
+    6.Write an expression that checks if given print (x,  y) is within a circle K(O, 5).
+-->
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> Check point in circle</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		#number {
+			border: 1px solid black;
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
+			font-family: Consolas;
+			margin-bottom: 5px;
+		}
+
+		a {
+			color: white;
+			background: green;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body>
+	<label for="tb-xCoord"> X: </label>
+	<input type="text" id="tb-xCoord" />
+    <label for="tb-yCoord"> Y: </label>
+	<input type="text" id="tb-yCoord" />
+	<br />
+	<a href="#" onclick="onCheckButtonClick()">Check</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onCalculateCheckClick() {
+	        var xCoord = jsConsole.readFloat("#tb-xCoord");
+	        var yCoord = jsConsole.readFloat("#tb-yCoord");
+	        var radius = Math.pow(5,2);
+	        var result = Math.pow(xCoord - 0, 2) + Math.pow(yCoord - 5, 2);
+
+	        if (result <= radius) {
+	            jsConsole.writeLine("The point( " + xCoord + "," + yCoord + ") is in circle K(0,5)");
+	        }
+	        else {
+	            sConsole.writeLine("The point( " + xCoord + "," + yCoord + ") is NOT in circle K(0,5)");
+	        }
+	    }
+	</script>
+</body>
+</html>

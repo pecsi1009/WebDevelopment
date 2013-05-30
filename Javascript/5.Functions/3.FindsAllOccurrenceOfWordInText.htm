@@ -1,0 +1,83 @@
+﻿<!--
+    3.Write a function that finds all the occurrences of word in a text
+        The search can case sensitive or case insensitive
+        Use function overloading
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> AllOccurrenceOfWord </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p> 3.Write a function that finds all the occurrences of word in a text
+        The search can case sensitive or case insensitive
+        Use function overloading
+    </p>
+    <p id="text"><strong>Text :</strong> You've gotta get up and try try try.GoTTa GET uP ANd TRY TRY TRy.</p>
+    <label for="tb-word">Enter searching word in the text: </label>
+	<input type="text" id="tb-word" />
+	<br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var word = jsConsole.read("#tb-word"); //take word
+	        var text = "You've gotta get up and try try try.GoTTa GET uP ANd TRY TRY TRY";
+	        var toLowerText = text.toLowerCase; //make all word lower in text
+	        var toLowerWord = word.toLowerCase; //make all char in word lower
+	        var indexArr = new Array(); 
+
+	        function FindsOccurrence(toLowerText, toLowerWord) {
+                var n = 0;                                                      
+                for (var i = 0; i < (toLowerText.length - toLowerWord.length) ;) { 
+                    var position = toLowerText.indexOf(toLowerWord, i);
+                    if (position == -1) {
+                        break;
+                    }
+                    arr[n] = position;
+                    i = (position + 1);
+                    n++;
+                }
+                if (n == 0) {
+                     jsConsole.writeLine("Positions of the word: " + "-1");
+                }
+                 else {
+                    jsConsole.writeLine("Positions of the word: " + indexArr);
+                    jsConsole.writeLine();
+                    jsConsole.writeLine("Number of occurrences: " + indexArr.length);
+                    jsConsole.writeLine();
+                }
+	        }
+	    }					
+    </script>			  	  
+</body>
+</html>

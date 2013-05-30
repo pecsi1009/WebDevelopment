@@ -1,0 +1,124 @@
+﻿<!--
+    2.You are given a text. Write a function that changes the text in all regions:
+        <upcase>text</upcase> to uppercase.
+        <lowcase>text</lowcase> to lowercase
+        <mixcase>text</mixcase> to mix casing(random)
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> ChangeTheText </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>You are given a text. Write a function that changes the text in all regions:</p>
+        <p><upcase>text</upcase> to uppercase.</p>
+        <p><lowcase>text</lowcase> to lowercase</p>
+        <p><mixcase>text</mixcase> to mix casing(random)</p>
+	<br/>
+    <br/>
+    <p><strong>Text:Gotta <mixcase>get up and</mixcase> try, try <upcase>try</upcase>. We <mixcase>
+    gotta</mixcase> get up and <lowcase>try</lowcase> try, try."</strong> <p>
+    <br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	 
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var text ="Gotta <mixcase>get up and</mixcase> try, try <upcase>try</upcase>. We <mixcase>gotta</mixcase> get up and <lowcase>try</lowcase> try, try.";
+	        var str = new Array();
+	        str = text.split("");
+
+	        var lookFor = "try";
+
+	        function getRandBinary() {
+	            // Random bynary digits generator
+	            var b = (Math.floor(Math.random() * 9) % 2);
+	            return b;
+	        }
+
+	        function mixCase(str) {
+	            var result = [];
+
+	            for (var i = 0; i < str.length; i++) {
+	                var rand = getRandBinary();
+	                if (rand == 1) {
+	                    result.push(str[i].toLowerCase());
+	                }
+	                else {
+	                    result.push(str[i].toUpperCase());
+	                }
+	            }
+
+	            return result.join('');
+	        }
+
+	        function toDo(command, str) {
+	            switch (command) {
+	                case "mixcase":
+	                    return mixCase(str);
+	                case "lowcase":
+	                    return str.toLowerCase();
+	                case "upcase":
+	                    return str.toUpperCase();
+	            }
+	        }
+
+	        var index = 0;
+	        while (index != -1) {
+	            // Find first tag.
+	            index = str.indexOf("<", index);
+	            if (index != -1) {
+	                // Check if tag is closing.
+	                if (str[index + 1] != "/") {
+	                    index = index + 1;
+	                    continue;
+	                }
+	                var endOpen = index;
+	                var endClose = str.indexOf(">", index);
+
+	                // Read command.
+	                var cmd = str.slice(index + 2, endClose).join('');
+
+	                // Find opening tag 
+	                var startOpen = str.lastIndexOf("<", index - 1);
+	                var startClose = startOpen + cmd.length + 2;
+
+	                var stringToChange = str.slice(startClose, endOpen).join('');
+
+	                // Replace tags and text with modified text.
+	                str.splice(startOpen, endClose - startOpen + 1, toDo(cmd, stringToChange));
+	            }
+	        }
+	        jsConsole.writeLine(str.join('')); //print the final text
+	    }											
+    </script>			  
+</body>
+</html>

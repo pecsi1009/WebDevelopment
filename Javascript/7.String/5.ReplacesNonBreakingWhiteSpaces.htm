@@ -1,0 +1,58 @@
+﻿<!--
+    5.Write a function that replaces non breaking white-spaces in a text with &nbsp;
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> ReplacesNonBreakingWhiteSpaces </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>Write a function that replaces non breaking white-spaces in a text with &nbsp;</p>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	 
+	</script>
+	<script>
+	    var sometext = new String(' Hello!I wish you luck with Javascript learning!!! ');
+	    jsConsole.writeLine(replaceWhiteSpaces(sometext, '&nbsp'));
+	    function replaceWhiteSpaces(text, newSymbol) {
+	        var result = '';
+	        for (var i = 0; i < text.length; i++) {
+	            if (text[i] == ' ') {
+	                result += newSymbol;
+	            }
+	            else {
+	                result += text[i];
+	            }
+	        }
+	        return result;
+	    }	
+    </script>			  
+</body>
+</html>

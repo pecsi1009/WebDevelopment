@@ -1,0 +1,73 @@
+﻿<!--
+    2.Write a function that removes all elements with a given value
+        Attach it to the array class.
+        Read about prototype and how to attach methods.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> RemovesAllElements </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>Write a function that removes all elements with a given value
+        Attach it to the array class
+        Read about prototype and how to attach methods
+    </p>
+    <p>arr = [0, 34, 4, 6, 56, "455", "367", 6, 1, 87, 5, 4, 5]</p>
+	<label for="tb-element">Element: </label>
+	<input type="text" id="tb-element" />
+	<br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var element = jsConsole.readFloat("#tb-element");
+
+	        Array.prototype.remove = function (element) {
+	            var array = [];
+	            for (var i in this) {
+	                if (this[i] != element) {
+	                    array.push(this[i]);
+	                }
+	            }
+	            return array;
+	        }
+	        var arr = [0, 34, 4, 6, 56, "455", "367", 6, 1, 87, 5, 4, 5];
+	        var finalArr = arr.remove(1);
+
+	        for (var i in finalArr) {
+	            jsConsole.write(finalArr[i] + ", ");
+	        }
+	    }											
+    </script>			  
+</body>
+</html>

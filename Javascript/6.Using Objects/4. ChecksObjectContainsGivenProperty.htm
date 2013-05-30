@@ -1,0 +1,64 @@
+﻿<!--
+    4.Write a function that checks if a given object contains a given property
+    var obj  = …;
+    var hasProp = hasProperty(obj,"length");
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> Check </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>4.Write a function that checks if a given object contains a given property
+    var obj  = …;
+    var hasProp = hasProperty(obj,"length");
+    </p>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function ContainProperty(obj, prpt) {
+            for (var i in obj) {
+                if (i == prpt) {
+                    return true;
+                }
+            }
+        return false;
+        }
+        var test = {
+            aveEi: 5,
+            babaYaga: 7,
+            c: 9
+        }
+        var ContainPropertyOf = ContainProperty(test, "babaYaga");
+        jsConsole.writeLine(ContainPropertyOf);				
+    </script>			  
+</body>
+</html>

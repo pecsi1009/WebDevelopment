@@ -1,0 +1,88 @@
+﻿<!--
+    7.Write a function that extracts the content of a html page given as text. The function should 
+    return anything that is in a tag, without the tags:<br />
+            &lt;html&gt;&lt;head&gt;&lt;title&gt;Sample site&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;
+            div&gt;text&lt;div&gt;more text&lt;/div&gt;and more...&lt;/div&gt;in body&lt;/body&gt;&lt;
+            /html&gt;<br/>
+            Result:<br />
+            Sample sitetextmore textand more...in body
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> ExtractTheContent </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>06. Write a function that extracts the content of a html page given as text. The function 
+    should return anything that is in a tag, without the tags:<br />
+            &lt;html&gt;&lt;head&gt;&lt;title&gt;Sample site&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt
+            ;div&gt;text&lt;div&gt;more text&lt;/div&gt;and more...&lt;/div&gt;in body&lt;/body&gt;&lt;
+            /html&gt;<br/>
+            Result:<br />
+            Sample sitetextmore textand more...in body</p>
+	<br/>
+    <p><strong>!!!Scroll to view the text</strong></p>
+    <textarea name="text"><html><head><title>Title</title></head><body><div>Hi!!!<div>I wish
+    </div>you luck to</div>the Javascript exam (body)</body></html>"</textarea>
+    <br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	 
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var inputString = "<html><head><title>Title</title></head><body><div>Hi!!!<div>I wish</div>you luck to</div>the Javascript exam (body)</body></html>"
+
+	        function ParseHtml(str) {
+	            var inTag = false;
+	            var result = [];
+
+	            var input = str || "";
+
+	            for (var i = 0; i < input.length; i++) {
+	                if (input[i] === "<") {
+	                    inTag = true;
+	                    continue;
+	                }
+	                else if (input[i] === ">") {
+	                    inTag = false;
+	                    continue;
+	                }
+	                else if (inTag === false) {
+	                    result.push(input[i]);
+	                }
+	            }
+	            return result.join('');
+	        }
+	        jsConsole.writeLine(inputString);
+        }    	
+    </script>			  
+</body>
+</html>

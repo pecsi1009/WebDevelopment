@@ -1,0 +1,28 @@
+﻿<!-- Write a script that finds the max and min number from a sequence of numbers -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LoopsFrom1ToN</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Write a script that finds the max and min number from a sequence of numbers</p>
+	<div id="js-console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function orderBy(x, y) {
+	        return x - y;
+        }
+        var numbers = [10, 1, 300, 5, 21, 54, 85, 0];
+        var length = 8;
+        jsConsole.writeLine(numbers.join(", "))
+
+        numbers.sort(orderBy); //sorting array, and after sorting min = first element , max = last elemnt of sequences.
+
+        jsConsole.writeLine("The min element in sequence is = " + numbers[0]);
+	    jsConsole.writeLine("The max element in sequence is = " + numbers[length-1]);
+    </script>
+</body>
+</html>

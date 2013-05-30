@@ -1,0 +1,73 @@
+﻿<!--
+    2.Write a function that reverses the digits of given decimal number. Example: 256 => 652
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> ReversesTheDigit </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>Write a function that reverses the digits of given decimal number. Example: 256 => 652</p>
+	<label for="tb-digit">Number: </label>
+	<input type="text" id="tb-digit" />
+	<br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var digit = jsConsole.readFloat("#tb-digit");
+
+	        function ReveresesDigits(digit) {
+	            var reversedDigit = 0;
+	            while(digit > 0)
+                {
+                    reversedDigit = (reversedDigit * 10) + (digit % 10);
+                    digit /= 10;
+                }
+                return reversedDigit;
+            }
+            if (digit > 0) {
+                jsConsole.write(digit + " => ");
+                jsConsole.writeLine(ReveresesDigits(digit));
+            }
+            else if (digit < 0) {
+                digit = digit * (-1);
+                jsConsole.write("-" + digit + " => ");
+                jsConsole.writeLine(ReveresesDigits(digit));
+            }
+            else {
+                jsConsole.writeLine("The number is 0");
+            }
+	    }											
+    </script>			  
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!--
+    5.Write a boolean expression for finding if the bit 3 (counting from 0) of a given integer is 1 or 0.
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Check third bit</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+	<style>
+		#number {
+			border: 1px solid black;
+			padding: 5px 15px;
+			background-color: black;
+			color: white;
+			font-family: Consolas;
+			margin-bottom: 5px;
+		}
+
+		a {
+			color: black;
+			border: 1px solid black;
+			padding: 5px 15px;
+			text-decoration: none;
+			display: inline-block;
+			margin: 15px 0;
+			background:green;
+            color:White;
+		}
+
+			a:hover {
+				text-decoration: underline;
+			}
+	</style>
+</head>
+<body>
+	<label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<br />
+	<a href="#" onclick="onCheckButtonClick()">Check</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onCheckButtonClick() {
+	        var num = jsConsole.readFloat("#tb-number");
+	        var p = 3;
+	        var mask = 1 << p;
+	        var result = (mask & num) >> p; 
+
+	        if (result == 1) {
+	            jsConsole.writeLine("The third bit in " + num + " <strong> is 1 </st")
+	        }
+	        else {
+	            jsConsole.writeLine("The third bit in " + num + " <strong> is 0 </strong>")
+	        }
+	    }
+	</script>
+</body>
+</html>

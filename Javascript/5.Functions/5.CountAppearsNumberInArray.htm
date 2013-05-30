@@ -1,0 +1,80 @@
+﻿<!--
+    5.Write a function that counts how many times given number appears in given array.
+     Write a test function to check if the function is working correctly.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title> CountOfAppears </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+    <style>
+		input[type=text]{
+			border:1px solid black;
+			padding:5px 15px;
+			background-color:black;
+			color:white;
+			font-family:Consolas;
+			font-size:18px;		   
+			margin-bottom:5px;
+			background-color:Black;
+		}
+
+		a{
+			color:white;
+			background:green;
+			border:1px solid black;
+			padding:5px 15px;						
+			text-decoration:none;	   
+			display:inline-block;		 
+			margin: 15px 0;
+		}v
+		a:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+    <p>Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.</p>
+	<p id="text"> array = [1, 4, 5, 3, 9, 12, 45, 67, 89, 32, 67, 4, 3, 90] </p>
+    <label for="tb-number">Number: </label>
+	<input type="text" id="tb-number" />
+	<br/>
+	<a href="#" onclick="onButtonClick()">Push</a>
+	<div id="console">
+	</div>
+	<script src="scripts/js-console.js">	  
+	</script>
+	<script>
+	    function onButtonClick() {
+	        var number = jsConsole.readFloat("#tb-number");
+	        var arr = [1, 4, 5, 3, 9, 12, 45, 67, 89, 32, 67, 4, 3, 90];
+	    
+	        jsConsole.write("In array number " + number + " is appears ");
+	        var count = CountAppearsOfNumber(arr, number);
+	        jsConsole.writeLine(count + " times");
+
+	        function CountAppearsOfNumber(arr, number) {
+	            count = 0;
+	            for (var i = 0; i < arr.length; i++) {
+	                if (arr[i] == number) {
+	                    count++;
+	                }
+	            }
+	            return count;
+	        }
+	        var testArray = [0, 1, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4]; // test array of numbers
+	        var testAnswer = [1, 2, 3, 4, 5];                // test array of matchs of numbers
+            
+            function TestFunction(testArray, testAnswer){ //this is the test functions
+                for (var i = 0; i < testArray.length; i++) {
+                  if (CountAppearsOfNumber(testArray, testArray[i]) != testAnswer[i]) {
+                      document.getElementById("result").style.display = "block";
+                     document.getElementById("result").value = "not working properly";
+                        return;
+                    }
+                }
+            }  
+	    }											
+    </script>			  
+</body>
+</html>
